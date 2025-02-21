@@ -3,15 +3,15 @@ This repository contains the implementations of the top-down forecasting framewo
 
 ## Global forecasting models with the aggregated series
 
-Run the Rscript [experiments/top_down_experiments.R]().
+Run the Rscript [experiments/top_down_experiments.R](https://github.com/xueyinglong/probabilistic-forecasting/blob/main/experiments/top_down_experiments.R).
 
-Available model options: LightGBM, pooled regression, LASSO, generalised additive models (GAM)... Please refere to [utils/global_models.R]()
+Available model options: LightGBM, pooled regression, LASSO, generalised additive models (GAM)... Please refere to [utils/global_models.R](https://github.com/xueyinglong/probabilistic-forecasting/blob/main/utils/global_models.R)
 
-An implementation of the negative binomial loss function under the LightGBM package (Python) is in [experiments/negbin_loss.py](), with details in the Appendix of the [paper](https://doi.org/10.1016/j.ijpe.2024.109449).
+An implementation of the negative binomial loss function under the LightGBM package (Python) is in [experiments/negbin_loss.py](https://github.com/xueyinglong/probabilistic-forecasting/blob/main/experiments/negbin_loss.py), with details in the Appendix of the [paper](https://doi.org/10.1016/j.ijpe.2024.109449).
 
 ## Forecasts at the lower (decision) level
 
-Run [experiments/produce_probf_top_down.R]().
+Run [experiments/produce_probf_top_down.R](https://github.com/xueyinglong/probabilistic-forecasting/blob/main/experiments/produce_probf_top_down.R).
 
 The point forecasts at the aggregated level are disaggregate down by historical proportions.
 
