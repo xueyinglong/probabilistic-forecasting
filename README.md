@@ -27,4 +27,6 @@ The versions of the software and packages that are used to conduct the experimen
 | Python                  |  3.7.0         |
 | LightGBM                |  3.3.2         |
 | glmnet                  |  4.1.8         |
+| tidyverse               |  1.3.2         |
+| dplyr                   |  1.1.4         |
 | GluonTS                 |  0.8.0         |
