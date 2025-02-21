@@ -81,9 +81,6 @@ if __name__ == "__main__":
     sku_id = sku_data.iloc[:, 0]
     sku_data = sku_data.iloc[:, 1:]
     
-    # get the test set
-    test_df = pd.read_csv("./data/M5_level_10_final_lags.csv")
-    
     global_vars.r_negbin = sku_data.mean(axis=1) ** 2 / (sku_data.var(axis=1) - sku_data.mean(axis=1))
     global_vars.num_sku = len(sku_data)
     
@@ -92,6 +89,8 @@ if __name__ == "__main__":
         subprocess.call(["Rscript", "--vanilla", BASE_DIR + "/utils/negbin_loss_data_helper.R", BASE_DIR, "/data/M5_level_10.rds", "M5_level_10", "item_id", str(lag), str(H)])
     train_df = pyreadr.read_r("./data/M5_level_10_embedded_matrix_fourier_terms_full.rds")
     train_df = train_df[None]
+    # get the test set
+    test_df = pd.read_csv("./data/M5_level_10_final_lags.csv")
     
     # training
     lgb_train = lgb.Dataset(train_df.iloc[:, 1:], train_df.iloc[:,0])
