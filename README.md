@@ -30,3 +30,18 @@ The versions of the software and packages that are used to conduct the experimen
 | tidyverse               |  1.3.2         |
 | dplyr                   |  1.1.4         |
 | GluonTS                 |  0.8.0         |
+
+# Citing Our Work
+When using this repository, please cite:
+
+```{r} 
+@article{long2025scalable,
+  title={Scalable probabilistic forecasting in retail with gradient boosted trees: A practitionerï¿½s approach},
+  author={Long, Xueying and Bui, Quang and Oktavian, Grady and Schmidt, Daniel F and Bergmeir, Christoph and Godahewa, Rakshitha and Lee, Seong Per and Zhao, Kaifeng and Condylis, Paul},
+  journal={International Journal of Production Economics},
+  volume={279},
+  pages={109449},
+  year={2025},
+  publisher={Elsevier}
+}
+```
