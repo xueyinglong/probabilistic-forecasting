@@ -61,7 +61,7 @@ for (method in methods) {
     mutate(id = paste(item_id, store_id, quantiles, sep = "_"), .before = 1) %>%
     select(id, starts_with("d_"))
   
-  colnames(top_down_fcast_poisson_quantiles) <- sprintf("F%01d", 1:28)
+  colnames(top_down_fcast_poisson_quantiles) <- c("id", sprintf("F%01d", 1:28))
   
   write.csv(top_down_fcast_poisson_quantiles, paste0("M5/submission_", method, "_level12_poisson_lag_", lag, "_", as.numeric(as.POSIXct(Sys.time())), ".csv"), row.names = F)
   
@@ -95,7 +95,7 @@ for (method in methods) {
     mutate(id = paste(item_id, store_id, quantiles, sep = "_"), .before = 1) %>%
     select(id, starts_with("d_"))
   
-  colnames(top_down_fcast_negbin_quantiles) <- sprintf("F%01d", 1:28)
+  colnames(top_down_fcast_negbin_quantiles) <- c("id", sprintf("F%01d", 1:28))
   
   write.csv(top_down_fcast_negbin_quantiles, paste0("M5/submission_", method, "_level12_negbin_lag_", lag, "_", as.numeric(as.POSIXct(Sys.time())), ".csv"), row.names = F)
   
